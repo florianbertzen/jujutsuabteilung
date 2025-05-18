@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Jujutsu und Selbstverteidigung im HSC</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+color: white;
+      font-family: Arial, sans-serif;
+    }
+
+.banner {
+  background: linear-gradient(to right, #fff, #111);
+  color: black;
+  padding: 1rem 2rem;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.banner-content img {
+  height: 80px;
+}
+
+.banner-content h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: black;
+}
+
+    .banner img {
+      height: 90px;
+    }
+
+    nav {
+      background-color: #222;
+    }
+
+    .navbar {
+      display: none;
+      flex-direction: column;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      display: block;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      background-color: #444;
+    }
+
+    .dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+    }
+
+    li:hover .dropdown {
+      display: flex;
+    }
+
+    .hamburger {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 1rem;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-content {
+      padding: 2rem;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        min-width: 200px;
+        z-index: 1000;
+      }
+
+      li:hover .dropdown {
+        display: block;
+        flex-direction: column;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <div class="banner">
+  <div class="banner-content">
+    <img src="logo HSC.png" alt="Vereinslogo Jujutsu" />
+    <h1>Jujutsu und Selbstverteidigung im HSC</h1>
+  </div>
+</div>
+
+  <nav>
+    <div class="menu-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+    <ul class="navbar" id="navMenu">
+      <li><a onclick="showSection('hauptseite')">Hauptseite</a></li>
+      <li><a onclick="showSection('was-ist-jujutsu')">Was ist Jujutsu?</a></li>
+      <li><a onclick="showSection('nicht-mit-mir')">Nicht mit mir!</a></li>
+      <li><a onclick="showSection('trainingszeiten')">Trainingszeiten</a></li>
+      <li><a onclick="showSection('veranstaltungen')">Veranstaltungen</a></li>
+      <li>
+        <a>Trainer ▼</a>
+        <ul class="dropdown">
+          <li><a onclick="showSection('trainerausbildung')">Trainerausbildung</a></li>
+          <li><a onclick="showSection('florian')">Florian</a></li>
+          <li><a onclick="showSection('bruno')">Bruno</a></li>
+        </ul>
+      </li>
+      <li><a onclick="showSection('galerie')">Galerie</a></li>
+      <li><a onclick="showSection('impressum')">Impressum</a></li>
+      <li><a onclick="showSection('datenschutz')">Datenschutz</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <section id="hauptseite" class="active">
+      <h2>Unser Ziel</h2>
+       
+    	<h1>Sicher. Stark. Selbstbewusst.</h1>
+
+	    <p>Willkommen bei <strong>„Kampfkunst für Kinder“</strong> – der Abteilung, die <em>Kampfkunst</em> und kindgerechte Selbstbehauptung vereint!</p>
+
+<img src="maskot.png" alt="Abteilungsmaskottchen" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+
+    <p>Bei uns lernen Kinder nicht nur Techniken – sie entwickeln Selbstvertrauen, Respekt und Achtsamkeit. Unser Training nutz traditionelle Kampfkunst und moderne Selbstbehauptung  – abwechslungsreich, wirkungsvoll und mit viel Freude vermittelt.</p>
+
+<img src="Bruchtest.jpg" alt="Bruchtest" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+
+<h2>Unser qualifiziertes Trainerteam:</h2>
+
+    <div class="trainer">
+	<p><strong>Florian</strong> (1. Dan Ju-Jitsu) – erfahrener Kampfkünstler, Gewaltschutzbeauftragter des HSC und zertifizierter Kursleiter des Programms „Nicht mit mir!“, einem bundesweiten Konzept zur Gewaltprävention für Kinder.
+    </div>
+
+    <div class="trainer">
+        <p><strong>Bruno</strong> (1. Kyu Judo) – engagierter Trainer, der seine Begeisterung für Bewegung und Disziplin weitergibt. Seine besondere Stärke ist die innere Ruhe, die er durch sein Alter ausstrahlt.</p>
+    </div>
+
+    <p>Wir vermitteln Techniken zur Selbstbehauptung und Selbstverteidigung aus dem <em>„Nicht mit mir!“</em>-Programm in Kombination mit bewährten Übungen aus dem traditionellen Ju-Jitsu. So entsteht ein kindgerechtes und modernes Konzept, das Körper und Geist gleichermaßen stärkt.</p>
+
+    <p class="highlight">Trainiere mit uns – für Stärke, Sicherheit und Spaß!</p>
+<img src="trainerteam1.jpg" alt="Trainerteam" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+<br>
+<br>
+<!--
+<div>
+ <h2>Ein neues Willkommen - oder warum wir jetzt eine (Kanryaku-Ka) Jujutsu-Abteilung sind</h2>
+
+  <p>Wir – Florian und Bruno – freuen uns, euch  in unserer Trainingsgruppe für Selbstbehauptung und Selbstverteidigung begrüßen zu dürfen!</p>
+
+    <p>Unsere gemeinsame Reise begann im <strong>Bujinkan-Training</strong>, wo wir uns kennengelernt haben. Schnell wurde klar, dass uns dieselbe Vision verbindet: Ein Training für Kinder zu gestalten, das auf einem starken Wertefundament basiert und gleichzeitig effektive Techniken vermittelt. Mit der Gründung unserer Kindergruppe entstand der Wunsch, Elemente aus dem <strong>JuJutsu</strong> und dem <strong>Bujinkan</strong> in ein pädagogisch sinnvolles und alltagsnahes Trainingskonzept zu integrieren.</p>
+
+    <p>Bruno brachte sich von Anfang an mit großem Engagement ein, und gemeinsam haben wir die Gruppe aufgebaut. Doch im Laufe der Vorbereitung auf die erste Gürtelprüfung wurde deutlich, dass sich die traditionellen Inhalte des Bujinkan nicht in einer kindgerechten und systematisch vermittelbaren Form umsetzen lassen. Der Unterschied zwischen der überlieferten Kampfkunst und einer modernen, zielgruppenorientierten Didaktik ist einfach zu groß.</p>
+
+    <p>Deshalb begaben wir uns auf die Suche nach einem System, das zu unseren Werten, unserer Erfahrung und den Bedürfnissen unserer Teilnehmer passt – und wurden im <strong>Kanryaku-ka Jujutsu</strong> fündig.</p>
+
+    <p>Dieses moderne Selbstverteidigungssystem erlaubt es uns, flexibel auf die realen Herausforderungen und Gefahren im Alltag unserer Kinder einzugehen. Es verbindet unsere bisherigen Kenntnisse mit einer klaren Struktur und vermittelt gleichzeitig wichtige soziale Kompetenzen wie <strong>Selbstbewusstsein</strong>, <strong>Achtsamkeit</strong> und <strong>Respekt</strong>.</p>
+
+    <p>Im kommenden Jahr werden wir uns gezielt fortbilden, um unser Training an das neue System anzupassen und unsere Inhalte weiterzuentwickeln. Wir freuen uns darauf, gemeinsam mit unseren Teilnehmern zu wachsen, neue Impulse zu setzen und noch bessere Erfolge zu erzielen.</p>
+
+    <p>In diesem Zusammenhang haben wir uns zudem dazu entschlossen, eine <strong>eigenständige JuJutsu-Abteilung im HSC</strong> zu gründen. Diese Entscheidung resultiert aus dem Wunsch, unsere Arbeit klarer zu strukturieren und langfristig ein eigenständiges, modernes und qualitativ hochwertiges JuJutsu-Angebot im Verein zu etablieren – mit einem klaren Fokus auf praxisnahe Selbstverteidigung und kontinuierliche Weiterentwicklung.</p>
+
+    <p>Dem <strong>Bujinkan Dōjō Harburg</strong> bleiben wir dennoch weiterhin verbunden. Wir trainieren dort selbst regelmäßig weiter und empfehlen interessierten Erwachsenen, die sich für traditionelle japanische Kampfkunst oder Ninjutsu interessieren, gerne ein kostenloses Probetraining.</p>
+
+    <p>Auch wenn die <strong>praktische Selbstverteidigung</strong> im Zentrum unseres Trainings steht, werden wir weiterhin einzelne <strong>Elemente der traditionellen Kampfkunst</strong> in unser Training einfließen lassen. Wir vermitteln dabei Hintergründe, Herkunft und kulturelle Zusammenhänge, um ein umfassenderes Verständnis für die Wurzeln der Kampfkünste zu schaffen. Diese Inhalte sind jedoch nicht mehr Schwerpunkt unserer Arbeit, sondern dienen ergänzend zur Förderung von Respekt, Geschichte und Achtsamkeit.</p>
+
+    <p><strong>Wir freuen uns auf die kommenden Herausforderungen – und auf viele weitere wertvolle Momente im Training mit unseren Kindern!</strong></p>
+
+<p> Mit freundlichen Grüßen <br>Florian Bertzen <br>Abteilungsleiter der Jujutsu Abteilung </p>
+</div>
+-->
+    </section>
+
+    <section id="was-ist-jujutsu">
+      <h2>Was ist Jujutsu?</h2>
+      <p>Jujutsu (auch Jujitsu oder Jiu-Jitsu) ist eine traditionelle japanische Kampfkunst, die sich auf waffenlose Selbstverteidigung spezialisiert hat. Das Wort „Jujutsu“ bedeutet wörtlich „die sanfte Kunst“ oder „die Kunst der Nachgiebigkeit“. Es basiert auf Techniken, bei denen man die Kraft des Gegners nutzt, um ihn zu kontrollieren oder zu überwältigen – etwa durch Hebel, Würfe, Gelenkmanipulationen, Würgetechniken und Bodenkampf.
+  </p>
+<img src="kids1.png" alt="Bodenrandori" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+<br>
+<br>
+  <h2>Entstehung von Jujutsu</h2>
+  <p>
+    Jujutsu entstand im feudalen Japan zwischen dem 15. und 17. Jahrhundert, in einer Zeit, in der Samurai als Kriegerklasse vorherrschend waren. Da Schwerter und Rüstungen im Kampf nicht immer eingesetzt werden konnten, entwickelten Samurai Jujutsu als waffenlose Technik für den Nahkampf, insbesondere wenn sie unbewaffnet oder in beengten Räumen kämpften. Die Techniken wurden über Generationen verfeinert und in verschiedenen Schulen (Ryu) weitergegeben.
+  </p>
+<img src="samurai.png" alt="Samurai Training" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+<br>
+<br>
+  <h2>Vergleichbare Kampfsysteme</h2>
+  <ul>
+    <li>
+      <strong>Judo:</strong> Entwickelt aus traditionellen Jujutsu-Techniken Anfang des 20. Jahrhunderts von Jigoro Kano. Judo fokussiert sich auf Würfe, Haltetechniken und den sportlichen Wettkampf, weniger auf Selbstverteidigung und Bodenkampf mit Schlägen.
+    </li>
+    <li>
+      <strong>Brazilian Jiu-Jitsu (BJJ):</strong> Entstand aus dem klassischen Jujutsu/Judo und legt den Schwerpunkt auf Bodenkampf, Hebel und Submission-Techniken. BJJ ist heute vor allem im MMA und als Selbstverteidigungssystem bekannt.
+    </li>
+    <li>
+      <strong>Aikido:</strong> Entwickelt von Morihei Ueshiba, basiert Aikido ebenfalls auf Jujutsu-Techniken, legt aber starken Wert auf harmonische, kreisförmige Bewegungen zur Kontrolle des Gegners ohne Verletzung. Es hat einen spirituellen, friedlichen Fokus.
+    </li>
+    <li>
+      <strong>Sambo:</strong> Eine russische Kampfkunst, die Elemente von Jujutsu, Ringen und Boxen kombiniert. Schwerpunkt liegt auf Würfen und Bodenkampf.
+    </li>
+  </ul>
+<img src="compare.png" alt="Kampfsport" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+<br>
+<br>
+  <h2>Wichtigste Unterschiede</h2>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+      <tr>
+        <th>System</th>
+        <th>Fokus</th>
+        <th>Haupttechniken</th>
+        <th>Wettkampf?</th>
+        <th>Philosophischer Ansatz</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Jujutsu</strong></td>
+        <td>Selbstverteidigung, vielseitig</td>
+        <td>Würfe, Hebel, Schläge, Würgen</td>
+        <td>Selten</td>
+        <td>Praktisch, effektiv im Kampf</td>
+      </tr>
+      <tr>
+        <td><strong>Judo</strong></td>
+        <td>Sportlicher Wettkampf</td>
+        <td>Würfe, Haltegriffe</td>
+        <td>Ja</td>
+        <td>Fairness, körperliche Ertüchtigung</td>
+      </tr>
+      <tr>
+        <td><strong>Brazilian Jiu-Jitsu</strong></td>
+        <td>Bodenkampf, Submission</td>
+        <td>Hebel, Würgegriffe am Boden</td>
+        <td>Ja</td>
+        <td>Kontrolle, Effizienz am Boden</td>
+      </tr>
+      <tr>
+        <td><strong>Aikido</strong></td>
+        <td>Harmonie, Selbstverteidigung</td>
+        <td>Umlenken von Kraft, Würfe, Hebel</td>
+        <td>Nein</td>
+        <td>Frieden, spirituelle Entwicklung</td>
+      </tr>
+      <tr>
+        <td><strong>Sambo</strong></td>
+        <td>Wettkampf, Selbstverteidigung</td>
+        <td>Würfe, Bodenkampf, Schläge</td>
+        <td>Ja</td>
+        <td>Effektivität, Vielseitigkeit</td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+<br>
+  <h2>Zusammenfassung</h2>
+  <p>
+    Jujutsu ist die traditionelle Basis vieler moderner Kampfkünste, die sich in verschiedenen Richtungen weiterentwickelt haben – vom Sportjudo bis zum Bodenkampf im BJJ oder der spirituellen Harmonie im Aikido. Sein großer Vorteil liegt in der Vielseitigkeit und der effektiven Nutzung der Kraft des Gegners, was es zu einem zeitlosen Selbstverteidigungssystem macht.
+  </p>
+</section>
+    </section>
+
+    <section id="nicht-mit-mir">
+      <h2>„Nicht mit mir!“</h2>
+<img src="5.jpg" alt="5" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+        <h2>„Nicht mit mir!“ – Selbstbehauptung für Kinder</h2>
+    <p>Ein zentraler Bestandteil unseres Trainings ist das <strong>„Nicht mit mir!“</strong>-Programm. Es wurde speziell für Kinder entwickelt und vermittelt auf spielerische Weise:</p>
+    <ul>
+        <li>wie man Gefahren frühzeitig erkennt,</li>
+        <li>wie man laut und deutlich Nein sagen kann,</li>
+        <li>wie man Hilfe holt,</li>
+        <li>und wie man sich im Ernstfall auch körperlich wehren kann.</li>
+    </ul>
+<img src="8.jpg" alt="8" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+    <p>Das Ziel ist klar: Kinder sollen sich <strong>sicher</strong>, <strong>stark</strong> und <strong>geschützt</strong> fühlen – im Alltag, in der Schule, auf dem Heimweg oder beim Spielen.</p>
+<img src="13.jpg" alt="13" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+
+    </section>
+
+    <section id="trainingszeiten">
+      <h2>Trainingszeiten</h2>
+<p> Das Probetraining ist kostenlos und umfasst drei Trainingseinheiten.<br>
+Anmeldung zum Probetraining und zur Warteliste bei Florian über folgende möglichkeiten<br>
+<br>
+<br>
+<a href="tel:+491711125740" style="
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+">
+  📞 +49 171 112 5740
+</a>
+<br>
+<br>
+<a href="https://wa.me/491711125740" target="_blank" style="
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+">
+  <i class="fab fa-whatsapp" style="color: white;"></i>
+  +49 171 112 5740
+</a>
+<br>
+<br>
+<a href="mailto:florianbertzen@gmail.com" style="color: white; text-decoration: none; font-weight: bold;
+  font-size: 1.2rem;">
+  ✉️ florianbertzen@gmail.com
+</a>
+<br>
+<br>
+<br>
+Das Kindertraining ist aktuell ausgebucht, bei Interesse nehmen wir Sie gerne auf die Warteliste mit auf.
+<br>
+<br>
+Ein Jugendtraining befindet sich in Planung, schaut regelmäßig hier vorbei um die Infos über start und Ort zu erhalten.<br>   
+<br>
+<ul>
+<br>
+        <li>Kindertraining: Donnerstag 18:00 – 19:30 Uhr - aktuell nur mit Warteliste, Anmeldung bei Florian</li><br>
+        <li>Jugendtraining in Planung</li><br>
+        <li>Bujinkan Abteilung Erwachsene Dienstag   20:00 - 22:00 Uhr</li><br>
+        <li>Bujinkan Abteilung Erwachsene Donnerstag 20:00 - 22:00 Uhr</li>
+        </ul>
+<br>
+<h2>Trainingort - Gymnastikhalle Alexander-von-Humboldt Gymnasium<h2>
+<p>ACHTUNG der Zugang über die Rönneburger Straße ist durch eine Baustelle aktuell nicht möglich. Zugang über den Eingang am Hanhoopsfeld</p> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1598.233659372253!2d9.99281300495728!3d53.43743484878455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b1916d8e1a748d%3A0x26b0ada9d039e75b!2sR%C3%B6nneburger%20Str.%2050%2C%2021079%20Hamburg!5e1!3m2!1sde!2sde!4v1747555755475!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="veranstaltungen">
+      <h2>Veranstaltungen</h2>
+      <ul>
+        <li>05. Juni – Gürtelprüfung Kinder - kein Training</li>
+        <li>07. - 09 Juni – Super Seminar Aurich</li>
+        </ul>
+    </section>
+
+    <section id="trainerausbildung">
+      <h2>Trainerausbildung</h2>
+      <p>Kompetenz, Sicherheit und Qualität 
+<img src="flo3.jpg" alt="5" style="display: block; margin: 20px auto; width: 300px; height: auto;">
+Unser Trainerteam bei Kampfkunst für Kinder steht für Qualität und Transparenz.<br> Deshalb legen wir besonderen Wert auf ein fundiert ausgebildetes und engagiertes Trainerteam. Unsere Trainer verfügen über anerkannte Lizenzen, langjährige Erfahrung im Ju-Jutsu und Judo sowie eine kindgerechte pädagogische Ausbildung.<br>
+Wir bilden uns kontinuierlich fort, um stets nach den neuesten Standards zu unterrichten. Unser Team nimmt regelmäßig an zertifizierten Schulungen teil – unter anderem bei:<br>
+<li>dem Deutschen Ju-Jutsu Verband (DJJV)</li><br>
+<li>dem Hamburgischen Ju-Jutsu Verband (HJJV)</li><br>
+<li>dem Hamburger Sportbund (HSB) – insbesondere im Bereich Kinderschutz und Vereinsentwicklung</li><br>
+<li>dem renommierten Superseminar Aurich, einem der größten Kampfkunstevents in Norddeutschland</li><br><br>
+Durch diese enge Zusammenarbeit mit Fachverbänden und Bildungseinrichtungen garantieren wir ein Training, das fachlich fundiert, sicherheitsbewusst und pädagogisch durchdacht ist.
+<br><br>
+<strong>Verlässlichkeit & Verantwortung</strong><br>
+Der Schutz und das Wohl der uns anvertrauten Kinder steht für uns an erster Stelle. <br>Daher legen alle Trainer von Kampfkunst für Kinder regelmäßig ein <strong>erweitertes polizeiliches Führungszeugnis </strong> vor und haben den <strong>Ehrenkodex der Deutschen Sportjugend </strong>unterzeichnet. <br>Wir leben diesen Kodex nicht nur auf dem Papier – sondern in jeder Trainingseinheit: durch Respekt, Fairness, Vorbildfunktion und ein sicheres, vertrauensvolles Miteinander.
+<br><br>
+Vertrauen Sie auf geprüfte Qualität – für die bestmögliche Förderung und Sicherheit Ihres Kindes.
+</p>
+    </section>
+
+    <section id="florian">
+      <h2>Trainer Florian</h2>
+      <h2>Florian-Niklas Bertzen – Mit Herz, Können und Erfahrung für unsere Kinder</h2>
+<img src="flo1.jpg" alt="5" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+
+    <p>Mein Name ist <strong>Florian-Niklas Bertzen</strong>, ich bin 42 Jahre alt und seit über 15 Jahren begeisterter Kampfkünstler. Mein Einstieg in die Welt der Kampfkunst begann mit dem Wunsch, persönlich zu wachsen und körperlich fitter zu werden. Durch die Unterstützung meines Trainers und Mentors <strong>Hans Kautz</strong> eröffnete sich für mich bald die Möglichkeit, mein Wissen und meine Werte an die nächste Generation weiterzugeben. Um dieser Verantwortung gerecht zu werden, absolvierte ich eine fundierte und praxisnahe Ausbildung.</p>
+
+    <h3>Mein Werdegang &amp; Qualifikationen:</h3>
+    <ul>
+        <li>DOSB-zertifizierter Trainerassistent</li>
+        <li>Kursleiter „Nicht mit mir!“ – Gewaltprävention für Kinder</li>
+        <li>Kursleiter „Nicht mit mir – Fit und Sicher“</li>
+        <li>Kinder- und Jugendschutzbeauftragter im Verein (DOSB)</li>
+        <li>Gewaltschutzbeauftragter im Verein</li>
+    </ul>
+
+    <p>Im Jahr <strong>2024</strong> wurde mir der <strong>1. Dan im Ju-Jutsu</strong> verliehen – ein bedeutender Meilenstein meiner Laufbahn. Im selben Jahr wurde ich zudem in den renommierten <strong>World Black Belt Council</strong> der <abbr title="Martial Arts Association – International">MAA-I</abbr> aufgenommen – eine internationale Auszeichnung für besondere Leistungen in der Kampfkunst.</p>
+
+    <p>Ich bin Gründer und verantwortlicher Leiter der Kinderabteilung, die ich mit großem Engagement, viel Herzblut und pädagogischem Feingefühl aufgebaut habe. Mein Ziel ist es, Kinder nicht nur körperlich, sondern auch mental zu stärken – durch Werte wie <strong>Respekt</strong>, <strong>Disziplin</strong> und <strong>Teamgeist</strong>.</p>
+
+    <h3>Wettkampferfolge:</h3>
+    <p>Während meiner aktiven Zeit als Wettkämpfer konnte ich mehrere Platzierungen auf regionaler Ebene im Ju-Jutsu Fighting erreichen. Diese Erfahrungen fließen heute gezielt in das Training ein – stets mit dem Fokus auf einen kindgerechten, motivierenden Ansatz.</p>
+
+    <p>Besonders stolz bin ich auf die Erfolge meiner Schützlinge im <strong>Bodenrandori</strong>, bei dem Kinder unter meiner Anleitung mehrfach erste und zweite Plätze errungen haben. Diese Erfolge zeigen die Qualität und Wirksamkeit unseres Trainingskonzepts.</p>
+
+    <h3>Trainerteam:</h3>
+    <p>Unterstützt werde ich von einem qualifizierten Trainerteam – allen voran <strong>Bruno (1. Kyu Judo)</strong>, der mit seiner langjährigen Erfahrung und seiner ruhigen, besonnenen Art einen wertvollen Beitrag zur Qualität unseres Trainings leistet.</p>
+
+    <blockquote><strong>„Kinder stark machen“ ist für mich nicht nur ein Motto – es ist meine Leidenschaft.</strong><br>
+    Ich freue mich darauf, Ihr Kind auf seinem Weg zu mehr Selbstvertrauen, Sicherheit und körperlicher Stärke zu begleiten.</blockquote>
+
+    </section>
+
+    <section id="bruno">
+      <h2>Trainer Bruno</h2>
+<br>
+      <p>Bruno – Erfahrung, Empathie und Energie vereint
+<img src="Bruno1.jpg" alt="5" style="display: block; margin: 20px auto; width: 200px; height: auto;">
+<br>
+<br>
+Mit über 60 Jahren bringt <strong>Bruno</strong> nicht nur beeindruckende körperliche Fitness mit, sondern auch eine außergewöhnliche Mischung aus Lebenserfahrung, Leidenschaft und Einfühlungsvermögen. Geboren in Frankreich und geprägt durch viele Reisen rund um den Globus, begegnet Bruno Menschen mit einem tiefen Verständnis für unterschiedliche Kulturen – ein wertvoller Schatz in jedem Training.
+<br>
+<br>
+Als Seelsorger hat er gelernt, zuzuhören, zu begleiten und echte Verbindung zu schaffen. Diese Qualität spüren auch seine Schüler: Bei Bruno steht nicht nur die Technik im Mittelpunkt, sondern der Mensch als Ganzes. Ob im Gespräch am Mattenrand oder während des Trainings – er hat immer ein offenes Ohr.
+<br>
+<br>
+Bruno besitzt den <strong>1. Kyu im Judo</strong> und widmet sich aktuell mit voller Energie seinem nächsten Ziel: dem <strong>1. Dan im Ju-Jutsu</strong>. 
+<br>
+<br>
+Sein Wissensdurst, seine Disziplin und seine spürbare Begeisterung für den Kampfsport machen ihn zu einem echten Vorbild – unabhängig vom Alter.
+<br>
+<br>
+    Bruno zeigt: Stärke ist nicht nur körperlich, sondern beginnt mit Haltung, Herz und Hingabe.</p>
+    </section>
+<section id="galerie">
+  <h2>Galerie</h2>
+
+  <div class="gallery-block">
+    <h3>Kindertraining</h3>
+    <div class="gallery">
+      <img src="trainerteam1.jpg" alt="Trainingseinheit 1">
+      <img src="trainerteam2.jpg" alt="Trainingseinheit 2">
+      <img src="trainerteam3.jpg" alt="Trainingseinheit 3">
+      <img src="Bruchtest.jpg" alt="Trainingseinheit 4">
+    </div>
+  </div>
+
+  <div class="gallery-block">
+    <h3>Trainer Florian</h3>
+    <div class="gallery">
+      <img src="flo1.jpg" alt="Trainer Florian 1">
+      <img src="flo2.png" alt="Trainer Florian 2">
+      <img src="flo3.jpg" alt="Trainer Florian 3">
+    </div>
+  </div>
+
+  <div class="gallery-block">
+    <h3>Trainer Bruno</h3>
+    <div class="gallery">
+      <img src="Bruno1.jpg" alt="Trainer Bruno 1">
+      <img src="Bruno2.jpg" alt="Trainer Bruno 2">
+      <img src="Bruno3.png" alt="Trainer Bruno 3">
+    </div>
+  </div>
+
+  <div class="gallery-block">
+    <h3>Prüfung & Training</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Training" alt="Training">
+      <img src="https://via.placeholder.com/300x200?text=Prüfung" alt="Prüfung">
+    </div>
+  </div>
+
+</section>
+
+    <section id="impressum">
+      <h2>Impressum</h2>
+      <p>Impressum
+<br>
+(Angaben gemäß § 5 TMG und § 55 RStV)
+<br>
+Verantwortlich für den Inhalt dieser Website:<br><br>
+Florian-Niklas Bertzen <br>
+Kleinfeld 77a<br>
+21149 Hamburg<br>
+Deutschland<br>
+<br>
+<a href="tel:+491711125740">📞 +49 171 112 5740</a><br>
+ <a href="https://wa.me/491711125740" target="_blank" style="color: #25D366; font-size: 2rem;">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<br>
+<a href="mailto:florianbertzen@gmail.com">✉️ florianbertzen@gmail.com</a>
+    </section>
+
+    <section id="datenschutz">
+      <h2>Datenschutzerklärung</h2>
+      <p>📄 Datenschutzerklärung<br>
+1. Allgemeine Hinweise<br>
+<br>
+Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Wir behandeln Ihre Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften (insbesondere DSGVO und TMG).
+<br>
+Diese Erklärung erläutert, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie als Nutzer haben.<br>
+<br>
+2. Verantwortlicher<br>
+<br>
+Florian-Niklas Bertzen<br>
+Kleinfeld 77a<br>
+21149 Hamburg<br>
+Deutschland<br>
+📞 Telefon: (+49) 171 / 112 574 0<br>
+📱 WhatsApp: (+49) 171 / 112 574 0<br>
+📧 E-Mail: florianbertzen@gmail.com<br>
+<br>
+3. Erhebung und Speicherung personenbezogener Daten<br>
+a) Beim Besuch dieser Website<br>
+<br>
+Beim Aufruf unserer Website werden durch den Browser automatisch Daten an unseren Server übermittelt. Diese umfassen u. a.:<br>
+<br>
+    IP-Adresse<br>
+<br>
+    Datum und Uhrzeit des Zugrufs<br>
+<br>
+    Browsertyp und -version<br>
+<br>
+    verwendetes Betriebssystem<br>
+<br>
+    Referrer-URL<br>
+<br>
+Diese Daten dienen ausschließlich der technischen Funktionssicherung und werden nicht zur Identifizierung genutzt.<br>
+<br>
+b) Kontaktaufnahme<br>
+<br>
+Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, speichern und verarbeiten wir Ihre Angaben zur Bearbeitung Ihrer Anfrage. Eine Weitergabe erfolgt nur mit Ihrer ausdrücklichen Einwilligung.
+<br>
+Hinweis zu WhatsApp: Durch die Nutzung von WhatsApp willigen Sie ein, dass Ihre Daten gemäß den Datenschutzrichtlinien von Meta Platforms Inc. (USA) verarbeitet werden. Dies kann eine Datenübertragung in Drittländer beinhalten.<br>
+<br>
+4. Einbindung von Google Maps<br>
+<br>
+Unsere Website nutzt Google Maps zur Darstellung des Trainingsorts. Beim Aufruf der Karte werden Daten (z. B. IP-Adresse, Standortinformationen) an Google übertragen.<br>
+<br>
+Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland
+Mehr Informationen: https://policies.google.com/privacy<br>
+<br>
+5. Ihre Rechte<br>
+<br>
+Sie haben jederzeit das Recht auf:<br>
+<br>
+    Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)<br>
+<br>
+    Berichtigung unrichtiger Daten (Art. 16 DSGVO)<br>
+<br>
+    Löschung Ihrer Daten (Art. 17 DSGVO)<br>
+<br>
+    Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>
+<br>
+    Datenübertragbarkeit (Art. 20 DSGVO)<br>
+<br>
+    Widerruf Ihrer Einwilligung (Art. 7 Abs. 3 DSGVO)<br>
+<br>
+    Widerspruch gegen Datenverarbeitung (Art. 21 DSGVO)<br>
+<br>
+    Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)<br>
+<br>
+6. Datensicherheit<br>
+<br>
+Wir setzen technische und organisatorische Maßnahmen ein, um Ihre Daten vor Verlust, Manipulation und unberechtigtem Zugriff zu schützen. Unsere Website nutzt eine verschlüsselte Verbindung (SSL).<br>
+<br>
+7. Änderungen<br>
+<br>
+Diese Datenschutzerklärung kann jederzeit aktualisiert werden, um gesetzlichen Anforderungen zu entsprechen.<br>
+<br>
+8. Kontakt<br>
+<br>
+Für Fragen zum Datenschutz:<br>
+📧 E-Mail: florianbertzen@gmail.com<br>
+📞 Telefon: (+49) 171 / 112 574 0</p><br>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; Harburger Sport-Club von 1904/07 e.V - Jujutsu Abteilung
+<br>Kontakt<br>
+📞 Telefon: (+049) 171/112 574 0<br>
+ Whatsapp: (+049) 171/112 574 0<br>
+📧 E-Mail: florianbertzen@gmail.com</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+
+      const selected = document.getElementById(id);
+      if (selected) selected.classList.add("active");
+
+      // Menü bei Mobilansicht nach Auswahl schließen
+      if (window.innerWidth < 768) {
+        document.getElementById("navMenu").style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
